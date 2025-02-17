@@ -1,1 +1,8 @@
-From:has Operating system(OS)
+/*From:>>Has Operating system(OS) like ex:Linux,ubuntu,MS,Alpine(light wt OS)
+it is used to define base image fo container
+it is mandatory to define the base image*/
+//Label:for describing the metadata
+
+
+From:Alpine:latest
+Lable: author="ruchita3107"
