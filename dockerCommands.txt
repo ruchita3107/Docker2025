@@ -1,0 +1,26 @@
+other commands:
+systemctl list-unit-files | grep docker- this shows docker is in whichstatus
+
+
+
+Install Docker on EC2 Instance
+sudo yum install docker -y
+sudo systemctl start docker
+sudo systemctl status docker
+systemctl list-unit-files | grep docker
+sudo systemctl enable docker
+sudo usermod -a -G docker ec2-user [ -a means adding and -G means group ]
+sudo systemctl restart docker
+exit
+Re Login to EC2 and try this command
+ i. docker info
+ Now you can run a sample application
+docker run -d -p 8080:8080 jenkins/jenkins
+   -d (run container in detached mode, in the background)
+   -p port mapping <host-port>:<container-port>
+Host port can be any available port
+The container port must be the same as the application configured on the container.
+docker ps (To see running containers)
+docker ps -a (To see both running and excited)
+Access the application (ec2publicip:8080(hostport))
+
