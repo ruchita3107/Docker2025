@@ -2,7 +2,8 @@
 it is used to define base image fo container
 it is mandatory to define the base image*/
 //Label:for describing the metadata
+//Run:all the sh commands which would be used
 
-
-From:Alpine:latest
-Lable: author="ruchita3107"
+FROM:Alpine:latest
+LABLE: author="ruchita3107"
+RUN:mkdir /j  avaHome
