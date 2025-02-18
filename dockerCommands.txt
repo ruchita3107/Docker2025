@@ -9,6 +9,8 @@ sudo systemctl start docker
 sudo systemctl status docker
 systemctl list-unit-files | grep docker
 sudo systemctl enable docker
+cat /etc/group
+id ec2-user
 sudo usermod -a -G docker ec2-user [ -a means adding and -G means group ]
 sudo systemctl restart docker
 exit
