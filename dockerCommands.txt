@@ -10,6 +10,7 @@ sudo systemctl status docker
 systemctl list-unit-files | grep docker
 sudo systemctl enable docker
 cat /etc/group
+cat /etc/os-release 
 id ec2-user
 sudo usermod -a -G docker ec2-user [ -a means adding and -G means group ]
 sudo systemctl restart docker
@@ -25,4 +26,8 @@ The container port must be the same as the application configured on the contain
 docker ps (To see running containers)
 docker ps -a (To see both running and excited)
 Access the application (ec2publicip:8080(hostport))
+
+to get inside container(bash will work if os matches the one in container)
+docker exec -it <container-id>/<container-name> bash
+ctrl+p+q (to come out of container)
 
