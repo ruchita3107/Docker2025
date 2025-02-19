@@ -1,6 +1,7 @@
 other commands:
 systemctl list-unit-files | grep docker- this shows docker is in whichstatus
 docker>>This command gives the list of all commands (for help)
+note:we are using docker only to create docker images rest we areusing kubernetes
 
 
 
@@ -31,4 +32,8 @@ Access the application (ec2publicip:8080(hostport))
 to get inside container(bash will work if os matches the one in container)
 docker exec -it <container-id>/<container-name> bash
 ctrl+p+q (to come out of container)
+docker rm <container id> -removes container
+docker rm $(docker ps -aq) -removes all container
+
+
 
