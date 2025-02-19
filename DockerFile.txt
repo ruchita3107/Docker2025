@@ -1,3 +1,5 @@
+Docker file is plain text file having set of instruction and docker image is binary file
+
 /*From:>>Has Operating system(OS) like ex:Linux,ubuntu,MS,Alpine(light wt OS)
 it is used to define base image fo container
 it is mandatory to define the base image*/
