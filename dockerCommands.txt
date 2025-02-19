@@ -1,5 +1,6 @@
 other commands:
 systemctl list-unit-files | grep docker- this shows docker is in whichstatus
+docker>>This command gives the list of all commands (for help)
 
 
 
