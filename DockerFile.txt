@@ -8,4 +8,4 @@ it is mandatory to define the base image*/
 
 FROM:Alpine:latest
 LABLE: author="ruchita3107"
-RUN:mkdir /j  avaHome
+RUN:mkdir /javaHome
