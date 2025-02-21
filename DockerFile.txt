@@ -6,6 +6,26 @@ it is mandatory to define the base image*/
 //Label:for describing the metadata
 //Run:all the sh commands which would be used
 
-FROM:Alpine:latest
-LABLE: author="ruchita3107"
-RUN:mkdir /javaHome
+# Install OpenJDK 8
+RUN apk add openjdk8
+
+# Set working directory
+WORKDIR /javahome
+
+# Download Apache Tomcat 10.1.36
+RUN wget https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.36/bin/apache-tomcat-10.1.36.tar.gz
+
+# Extract Tomcat archive
+RUN tar -zxvf apache-tomcat-10.1.36.tar.gz
+
+# Remove the tar file after extraction
+RUN rm apache-tomcat-10.1.36.tar.gz
+
+# Rename the extracted folder to 'tomcat10'
+RUN mv apache-tomcat-10.1.36 tomcat10
+
+# Create the necessary directory
+RUN mkdir -p /javahome/tomcat10/webapps/java
+
+# Write content to the index.html file
+RUN echo "welcome to docker world" > /javahome/tomcat10/webapps/java/index.html
